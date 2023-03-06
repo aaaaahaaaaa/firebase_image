@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -105,8 +104,7 @@ class FirebaseImage extends ImageProvider<FirebaseImage> {
   }
 
   Future<Codec> _fetchImageCodec() async {
-    return await PaintingBinding.instance!
-        .instantiateImageCodec(await _fetchImage());
+    return await PaintingBinding.instance.instantiateImageCodec(await _fetchImage());
   }
 
   @override
